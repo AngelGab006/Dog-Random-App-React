@@ -26,12 +26,13 @@ export const Card = ()=>{
     };
     return(
         <div className="CardContainer">
+            <h1>Click the image for a NEW random dog!!! </h1>
             <figure onClick={async ()=>{await findRamdonDog()}}>
                 <img className="DogImg" src={dogImage} onError={()=>{setNewImage(Image404); setNewBreed(dogBreed + ' Not Found')}} alt="Dog Image"/>
                 <figcaption>{dogBreed}</figcaption>
             </figure>
             <div className="TextCardContainer">
-                <a href={dogImage} download><p>{dogBreed}</p><img src={download} alt="download-image"/></a>
+                <a href={dogImage} download>{`${dogBreed} to download`}<img src={download} alt="download-image"/></a>
             </div>
         </div>
     )

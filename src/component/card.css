@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .TextCardContainer{
     display: flex;
@@ -9,15 +11,26 @@
     width: 100%;
 }
 .TextCardContainer a{
-    display: grid;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
     height: 20px;
-    grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
+    min-width: 15%;
     align-items: center;
+    justify-content: space-around;
     text-align: center;
     background-color: gray;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+.TextCardContainer a:hover{
+    background-color: rgb(45, 88, 197);
+}
+.TextCardContainer a:active{
+    background-color: rgb(25, 56, 134);
 }
 figure {
     display: grid;
